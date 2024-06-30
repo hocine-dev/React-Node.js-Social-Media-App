@@ -1,0 +1,54 @@
+# Node.js related
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# MongoDB
+*.seed
+
+# React Native
+*.expo
+.expo/
+.expo-shared/
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+*.swp
+
+# Ignore the following directories
+src/services/
+src/tests/
+
+# Ignore backend build
+backend/build/
+
+# Ignore coverage reports
+coverage/
