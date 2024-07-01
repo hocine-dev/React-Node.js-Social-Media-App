@@ -11,7 +11,7 @@ router.post('/register', async (req, res) => {
       // Check if username or email already exist in database
       const existingUser = await User.findOne({ $or: [{ username }, { email }] });
       if (existingUser) {
-        return res.status(400).send('Username or email already exists');
+        return res.status(400).send('Username already exists');
       }
 
       // hash password
@@ -23,12 +23,7 @@ router.post('/register', async (req, res) => {
       const newUser = new User({
         username,
         email,
-        password:hashedPassword, 
-        profilePicture: '',
-        coverPicture: '',
-        followers: [],
-        following: [],
-        isAdmin: false
+        password:hashedPassword
       });
   
       // Save the new user to the database

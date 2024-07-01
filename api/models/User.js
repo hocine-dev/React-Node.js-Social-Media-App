@@ -64,7 +64,7 @@ const UserSchema = new Schema(
     },
   },
   { timestamps: true }
-); // Add timestamps option
+); 
 
 // Create and export the User model
 const User = mongoose.model("User", UserSchema);
