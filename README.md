@@ -27,7 +27,7 @@ To run this project locally, clone the repository and follow these steps:
 
 1. Clone the repository:
 
-   git clone https://github.com/your-username/React-Node.js-Social-Media-App.git
+   git clone https://github.com/hocine-dev/React-Node.js-Social-Media-App.git
 
 2. Install dependencies for the frontend and backend:
 
