@@ -1,0 +1,82 @@
+.topbar {
+  background-color: #4267b2; /* Facebook Blue */
+  position: sticky;
+  top: 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left .logo {
+  height: 40px;
+  font-size: 24px;
+}
+
+.left {
+  flex: 3;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex: 5;
+}
+.right {
+  flex: 4;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 10px;
+  border-radius: 30px;
+  width: 80%;
+  font-size: 20px;
+}
+
+.searchIcon {
+  color: #606770; /* Light grey */
+}
+
+.inputBase {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.css-imxc6v-MuiBadge-badge{transform: scale(1) translate(100%, -50%) !important;}
+
+.right button span{margin-inline: 10px;}
+
+@media (max-width: 768px) {
+  .center {
+    display: none;
+  }
+
+  .searchbar {
+    width: 100%;
+  }
+}
