@@ -1,0 +1,86 @@
+.sidebar {
+    flex: 3;
+    height: calc(100vh - 64px);
+    background-color: #f0f2f5;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .showMore {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-top: 1px solid #dddfe2;
+    margin-top: 10px;
+    color: #65676b;
+  }
+  
+  .showMore:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .sectionTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .friendList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .friendAvatar {
+    margin-right: 10px;
+  }
+
+  .sidebar {
+    flex: 3;
+    height: calc(100vh - 64px);
+    background-color: #f0f2f5;
+    padding: 20px;
+    overflow-y: auto; /* Use 'auto' instead of 'scroll' to only show scrollbar when needed */
+  }
+  
+  /* Custom scrollbar styles */
+  .sidebar::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: #f0f2f5; /* Color of the scrollbar track */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners of the scrollbar thumb */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #b3b3b3; /* Hover color of the scrollbar thumb */
+  }
+  
