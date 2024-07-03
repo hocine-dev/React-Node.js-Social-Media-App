@@ -1,0 +1,88 @@
+.post {
+    width: 97%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 10px;
+    
+  }
+  
+  .postWrapper {
+    padding: 10px;
+  }
+  
+  .postTop, .postBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .postTopLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postProfileImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .postUsername {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  
+  .postDate {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .postCenter {
+    margin: 20px 0;
+  }
+  
+  .postText {
+    margin-bottom: 10px;
+  }
+  
+  .postImg {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-block: 10px;
+  }
+  
+  .postBottomLeft, .postBottomRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .likeIcon, .commentIcon {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .postLikeCounter, .postCommentText {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .postCommentForm {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .commentInput {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .commentButton {
+    padding: 10px 20px;
+  }
+  
+  .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{width:98% !important}

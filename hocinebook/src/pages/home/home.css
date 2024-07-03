@@ -3,13 +3,10 @@
 }
 .sidebar {
   flex: 3;
-  height: calc(100vh-64px);
 }
 .feed {
   flex: 6;
-  height: calc(100vh-64px);
 }
 .rightbar {
   flex: 3;
-  height: calc(100vh-64px);
 }

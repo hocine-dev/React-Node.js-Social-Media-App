@@ -1,0 +1,113 @@
+.rightbar {
+    flex: 3;
+    height: calc(100vh - 64px);
+    background-color: #f0f2f5;
+    padding: 20px;
+    overflow-y: auto; /* Make sure to use 'auto' to show the scrollbar only when needed */
+    direction: rtl; /* Changes text direction and scrollbar position */
+  }
+  
+  .rightbarWrapper {
+    padding: 20px;
+    direction: ltr; /* Restores normal text direction inside the wrapper */
+  }
+  
+  .rightbarSection {
+    margin-bottom: 20px;
+  }
+  
+  .rightbarTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rightbarFriendList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rightbarFriend {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .rightbarFriend:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .rightbarProfileImgContainer {
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .rightbarProfileImg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .rightbarOnline {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    border: 2px solid white;
+  }
+  
+  .rightbarUsername {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .rightbarSuggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .rightbarSuggestion:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .rightbarSuggestionInfo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  
+  .rightbarFollowButton {
+    padding: 5px 10px;
+  }
+  
+  .rightbarAd {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Custom scrollbar styles */
+  .rightbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .rightbar::-webkit-scrollbar-track {
+    background: #f0f2f5;
+  }
+  
+  .rightbar::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
+  .rightbar::-webkit-scrollbar-thumb:hover {
+    background-color: #b3b3b3;
+  }
+  
