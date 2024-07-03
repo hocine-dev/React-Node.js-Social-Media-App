@@ -1,10 +1,12 @@
 .sidebar {
-    flex: 3;
-    height: calc(100vh - 64px);
-    background-color: #f0f2f5;
-    padding: 20px;
-    overflow-y: scroll;
-  }
+  flex: 3;
+  height: calc(100vh - 64px);
+  background-color: #f0f2f5;
+  padding: 20px;
+  overflow-y: auto; /* Ensure the overflow-y is set to auto */
+  position: sticky;
+  top: 64px; /* Adjust this value based on your layout */
+}
   
   .options {
     margin-bottom: 20px;
@@ -58,13 +60,6 @@
     margin-right: 10px;
   }
 
-  .sidebar {
-    flex: 3;
-    height: calc(100vh - 64px);
-    background-color: #f0f2f5;
-    padding: 20px;
-    overflow-y: auto; /* Use 'auto' instead of 'scroll' to only show scrollbar when needed */
-  }
   
   /* Custom scrollbar styles */
   .sidebar::-webkit-scrollbar {

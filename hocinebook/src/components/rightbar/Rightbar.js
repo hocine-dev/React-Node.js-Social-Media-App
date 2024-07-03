@@ -1,6 +1,9 @@
 import React from 'react';
 import './rightbar.css';
 import { Avatar, Button } from '@mui/material';
+import OnlineUsers from '../OnlineUsers/OnlineUsers';
+import {Users} from '../../dummyData'
+
 
 const Rightbar = () => {
   return (
@@ -8,17 +11,8 @@ const Rightbar = () => {
       <div className="rightbarWrapper">
         <div className="rightbarSection">
           <h4 className="rightbarTitle">Online Friends</h4>
-          <ul className="rightbarFriendList">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <li className="rightbarFriend" key={index}>
-                <div className="rightbarProfileImgContainer">
-                  <Avatar src={`./assets/person/${index + 1}.jpeg`} className="rightbarProfileImg" />
-                  <span className="rightbarOnline"></span>
-                </div>
-                <span className="rightbarUsername">John Doe {index + 1}</span>
-              </li>
-            ))}
-          </ul>
+          {Users.map(u=>(<OnlineUsers key={u.id} user={u}/>))}
+          
         </div>
 
         <div className="rightbarSection">

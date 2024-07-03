@@ -1,5 +1,6 @@
 import React from "react";
 import "./topbar.css";
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -28,7 +29,7 @@ const Topbar = () => {
         </div>
         <div className="right">
           <div className="links">
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
             <a href="#profile">Timeline</a>
           </div>
 
@@ -51,7 +52,9 @@ const Topbar = () => {
           </IconButton>
 
           <IconButton color="inherit">
-            <Avatar src="./assets/person/1.jpeg" alt="Profile" />
+            <Link to="/profile" style={{ textDecoration: "none" }}>
+              <Avatar src="./assets/person/1.jpeg" alt="Profile" />
+            </Link>
           </IconButton>
         </div>
       </Toolbar>

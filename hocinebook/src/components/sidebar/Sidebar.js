@@ -1,7 +1,9 @@
 import React from 'react';
 import './sidebar.css';
-import { Avatar } from '@mui/material';
-import { Feed, Chat, VideoLibrary, Group, Bookmarks, HelpOutline, Work, Event, School } from '@mui/icons-material';
+import { Feed, Chat, VideoLibrary, Group, Bookmarks, HelpOutline, Work, Event } from '@mui/icons-material';
+import {Users} from '../../dummyData'
+import Friends from './friends/Friends';
+
 
 const Sidebar = () => {
   return (
@@ -48,29 +50,12 @@ const Sidebar = () => {
       <div className="friends">
         <p className="sectionTitle">Friends</p>
         <div className="friendList">
-          {dummyFriends.map((friend, index) => (
-            <div key={index} className="friend">
-              <Avatar src={`/assets/person/${index + 1}.jpeg`} alt={`Friend ${index + 1}`} className="friendAvatar" />
-              <p>{friend}</p>
-            </div>
-          ))}
+          {Users.map(u=>(<Friends key={u.id} user={u}/>))}
+
         </div>
       </div>
     </div>
   );
 };
-
-const dummyFriends = [
-  'John Doe',
-  'Jane Smith',
-  'Michael Johnson',
-  'Emily Brown',
-  'David Lee',
-  'Sarah Wilson',
-  'James Garcia',
-  'Jennifer Martinez',
-  'Robert Davis',
-  'Lisa Rodriguez'
-];
 
 export default Sidebar;

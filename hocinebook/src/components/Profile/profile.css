@@ -1,0 +1,43 @@
+.userProfileContainer {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profileSection {
+    flex: 2;
+    margin-right: 20px;
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profileAvatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+  }
+  
+  .profileUsername {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profileInfo {
+    margin-bottom: 20px;
+  }
+  
+  .profileLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .profileBio {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

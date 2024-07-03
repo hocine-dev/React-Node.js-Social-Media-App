@@ -4,6 +4,8 @@
   top: 0;
 }
 
+#root header{position: sticky !important;top: 0; z-index: 100 !important;}
+
 .toolbar {
   display: flex;
   justify-content: space-between;
