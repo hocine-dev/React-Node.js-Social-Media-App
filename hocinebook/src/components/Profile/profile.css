@@ -1,43 +1,59 @@
 .userProfileContainer {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .profileSection {
-    flex: 2;
-    margin-right: 20px;
-  }
-  
-  .profileHeader {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .profileAvatar {
-    width: 120px;
-    height: 120px;
-    margin-right: 20px;
-  }
-  
-  .profileUsername {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .profileInfo {
-    margin-bottom: 20px;
-  }
-  
-  .profileLink {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .profileBio {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center; /* Center align the text */
+}
+
+.profileCover {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Set a fixed height for the cover image */
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileDetails {
+  position: absolute;
+  bottom: -60px; /* Adjusted to overlap the profile avatar */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure the profileDetails are on top of the cover image */
+}
+
+.profileAvatar {
+  width: 120px;
+  height: 120px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: white; /* Add background to avoid any hidden part */
+  z-index: 2; /* Ensure the profileAvatar is on top of everything */
+  position: relative; /* Add relative position */
+}
+
+.profileInfo {
+  margin-top: 60px; /* Ensure space for the overlapped avatar */
+  padding: 10px;
+}
+
+.profileUsername {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.profileDescription {
+  font-size: 16px;
+  color: #65676b;
+}
