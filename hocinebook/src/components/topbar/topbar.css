@@ -4,7 +4,11 @@
   top: 0;
 }
 
-#root header{position: sticky !important;top: 0; z-index: 100 !important;}
+#root header {
+  position: sticky !important;
+  top: 0;
+  z-index: 100 !important;
+}
 
 .toolbar {
   display: flex;
@@ -69,9 +73,13 @@
   align-items: center;
 }
 
-.css-imxc6v-MuiBadge-badge{transform: scale(1) translate(100%, -50%) !important;}
+.css-imxc6v-MuiBadge-badge {
+  transform: scale(1) translate(100%, -50%) !important;
+}
 
-.right button span{margin-inline: 10px;}
+.right button span {
+  margin-inline: 10px;
+}
 
 @media (max-width: 768px) {
   .center {
@@ -81,4 +89,12 @@
   .searchbar {
     width: 100%;
   }
+}
+
+.disable {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }

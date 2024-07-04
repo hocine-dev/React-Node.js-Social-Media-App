@@ -20,7 +20,11 @@ const Topbar = () => {
   return (
     <AppBar position="static" className="topbar">
       <Toolbar className="toolbar">
-        <div className="left">Hocinebook</div>
+        <div className="left">
+          <Link to="/" className="disable">
+            Hocinebook
+          </Link>
+        </div>
         <div className="center">
           <div className="searchbar">
             <Search className="searchIcon" />
@@ -29,8 +33,8 @@ const Topbar = () => {
         </div>
         <div className="right">
           <div className="links">
-            <a href="/">Home</a>
-            <a href="#profile">Timeline</a>
+            <Link to="/">Home</Link>
+            <Link to="/Timeline">Timeline</Link>
           </div>
 
           <IconButton color="inherit">
