@@ -50,3 +50,8 @@
   margin: 5px 0 0;
 }
 
+.css-1p4agwk-MuiPaper-root-MuiCard-root{
+  min-width: 90%;
+}
+
+.info-container{display: flex;}

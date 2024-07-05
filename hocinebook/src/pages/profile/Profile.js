@@ -17,7 +17,7 @@ function Profile() {
         <UserProfile/>
         <Feed />
         </div>
-        <Rightbar />
+        <Rightbar profile />
       </div>
     </>
   );

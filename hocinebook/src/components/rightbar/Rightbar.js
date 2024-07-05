@@ -5,7 +5,7 @@ import OnlineUsers from '../OnlineUsers/OnlineUsers';
 import {Users} from '../../dummyData'
 
 
-const Rightbar = () => {
+const Rightbar = ({profile}) => {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
