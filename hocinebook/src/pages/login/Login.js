@@ -20,6 +20,11 @@ const Login = () => {
     console.log('Navigate to create account page');
   };
 
+  const handleForgotPassword = () => {
+    // Logic for handling forgot password functionality
+    console.log('Navigate to forgot password page');
+  };
+
   return (
     <div className="login-root">
       <div className="paper">
@@ -71,6 +76,15 @@ const Login = () => {
             onClick={handleCreateAccount}
           >
             Create Account
+          </Button>
+          <Button
+            fullWidth
+            variant="text"
+            color="primary"
+            className="forgot-password"
+            onClick={handleForgotPassword}
+          >
+            Forgot Password?
           </Button>
         </form>
       </div>

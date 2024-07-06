@@ -1,5 +1,7 @@
 /* login.css */
 
+button{margin-block: 10px !important;}
+
 .login-root {
     display: flex;
     flex-direction: column;
