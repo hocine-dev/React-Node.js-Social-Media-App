@@ -4,39 +4,32 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useNavigate } from 'react-router-dom';
+import './register.css'; // Import your custom CSS file
 
-import './login.css'; // Import your custom CSS file
-
-const Login = () => {
+const Register = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log(`Logging in with username: ${username} and password: ${password}`);
+    // Handle registration logic here
+    console.log(`Registering with username: ${username}, email: ${email}, and password: ${password}`);
   };
   const navigate = useNavigate();
-
-  const handleCreateAccount = () => {
-    
-      navigate('/register');
-  
-  };
-
-  const handleForgotPassword = () => {
-    // Logic for handling forgot password functionality
-    console.log('Navigate to forgot password page');
+  const handleLogin = () => {
+    navigate('/login');
   };
 
   return (
-    <div className="login-root">
+    <div className="register-root">
       <div className="paper">
         <Avatar className="avatar">
           <LockOutlinedIcon />
         </Avatar>
-        <h1 className="title">Hocinebook - Connect with friends around the world</h1>
-        <form className="form" onSubmit={handleLogin}>
+        <h1 className="title">Sign Up for Hocinebook</h1>
+        <form className="form" onSubmit={handleRegister}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -55,6 +48,18 @@ const Login = () => {
             margin="normal"
             required
             fullWidth
+            id="email"
+            label="Email"
+            name="email"
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
             name="password"
             label="Password"
             type="password"
@@ -63,6 +68,19 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="confirm-password"
+            label="Confirm Password"
+            type="password"
+            id="confirm-password"
+            autoComplete="current-password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
           <Button
             type="submit"
             fullWidth
@@ -70,25 +88,16 @@ const Login = () => {
             color="primary"
             className="submit"
           >
-            Log In
-          </Button>
-          <Button
-            fullWidth
-            variant="outlined"
-            color="primary"
-            className="create-account"
-            onClick={handleCreateAccount}
-          >
-            Create Account
+            Sign Up
           </Button>
           <Button
             fullWidth
             variant="text"
             color="primary"
-            className="forgot-password"
-            onClick={handleForgotPassword}
+            className="login"
+            onClick={handleLogin}
           >
-            Forgot Password?
+            Already have an account? Log In
           </Button>
         </form>
       </div>
@@ -96,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
