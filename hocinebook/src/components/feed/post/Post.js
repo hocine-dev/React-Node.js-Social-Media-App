@@ -1,29 +1,47 @@
-import React, { useState } from "react";
+import React, { useState , useEffect  } from "react";
 import "./post.css";
 import { Avatar, IconButton, Button, TextField } from "@mui/material";
 import { MoreVert, ThumbUp, ChatBubbleOutline } from "@mui/icons-material";
-import { Users } from "../../../dummyData";
+import axios from "axios";
+
 
 const Post = ({ post }) => {
-  const [Likes, setLikes] = useState(post.like);
+  const pf = process.env.REACT_APP_PUBLIC_FOLDER;
+  const [Likes, setLikes] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
+  const [User, setUser] = useState({})
 
   const likeHandler = () => {
     setLikes(isLiked ? Likes - 1 : Likes + 1);
     setIsLiked(!isLiked);
   };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const userId = post.userId;
+        const res = await axios.post(pf+'users', { userId });
+        setUser(res.data);
+      } catch (error) {
+        console.error("Error fetching user:", error);
+      }
+    };
+    fetchUser();
+  },[post.userId,pf]);
+
+
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
             <Avatar
-              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
+              src={User.profilePicture || pf + "person/noavatar.jpeg" }
               alt="Profile"
               className="postProfileImg"
             />
             <span className="postUsername">
-              {Users.filter((u) => u.id === post.userId)[0].username}
+              {User.username}
             </span>
             <span className="postDate">{post.date}</span>
           </div>

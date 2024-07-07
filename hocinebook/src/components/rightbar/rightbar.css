@@ -4,7 +4,6 @@
     background-color: #f0f2f5;
     padding: 20px;
     overflow-y: auto; /* Make sure to use 'auto' to show the scrollbar only when needed */
-    direction: rtl; /* Changes text direction and scrollbar position */
     position: sticky;
     top: 64px;
   }
