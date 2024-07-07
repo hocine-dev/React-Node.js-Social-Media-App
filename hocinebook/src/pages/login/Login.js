@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 import './login.css'; // Import your custom CSS file
 
@@ -90,6 +92,16 @@ const Login = () => {
           >
             Forgot Password?
           </Button>
+          <Button
+  fullWidth
+  variant="text"
+  color="primary"
+  className="home"
+  component={Link}
+  to="/"
+>
+  Back to Home
+</Button>
         </form>
       </div>
     </div>
