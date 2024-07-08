@@ -7,7 +7,6 @@ import {format} from "timeago.js"
 
 
 const Post = ({ post }) => {
-  console.log(post)
   const pf = process.env.REACT_APP_PUBLIC_FOLDER;
   const [Likes, setLikes] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
@@ -21,9 +20,10 @@ const Post = ({ post }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const userId = post.userId;
-        const res = await axios.post(pf+'users', { userId });
+      
+        const res = await axios.get('http://localhost:8800/api/users/6682e5499dcc84fc978d2ee5');        setUser(res.data);
         setUser(res.data);
+
       } catch (error) {
         console.error("Error fetching user:", error);
       }
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
         <div className="postTop">
           <div className="postTopLeft">
             <Avatar
-              src={User.profilePicture || pf + "person/noavatar.jpeg" }
+              src={pf+User.profilePicture || pf + "person/noavatar.jpeg" }
               alt="Profile"
               className="postProfileImg"
             />
@@ -59,8 +59,8 @@ const Post = ({ post }) => {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <IconButton>
-              <ThumbUp className="likeIcon" onClick={likeHandler} />
+            <IconButton onClick={likeHandler} >
+              <ThumbUp className="likeIcon" />
             </IconButton>
             <span className="postLikeCounter">{Likes} likes</span>
           </div>
@@ -68,7 +68,7 @@ const Post = ({ post }) => {
             <IconButton>
               <ChatBubbleOutline className="commentIcon" />
             </IconButton>
-            <span className="postCommentText">{post.comment} comments</span>
+            <span className="postCommentText"> comments</span>
           </div>
         </div>
         <div className="postCommentForm">

@@ -8,7 +8,7 @@ const Share = () => {
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <Avatar src="/path/to/profile.jpg" alt="Profile" className="shareAvatar" />
+          <Avatar src="/assets/person/1.jpeg" alt="Profile" className="shareAvatar" />
           <input
             placeholder="What's on your mind?"
             className="shareInput"

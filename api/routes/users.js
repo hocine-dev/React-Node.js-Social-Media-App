@@ -42,12 +42,21 @@ router.delete("/:id", async (req, res) => {
 
 // Get User
 router.get("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Max-Age", "1800");
+  res.setHeader("Access-Control-Allow-Headers", "content-type");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  );
+  if (req.params.id) {
     try {
       const user = await User.findById(req.params.id).select("-password"); // Exclude the password field
       if (!user) {
         return res.status(404).json("User not found");
       }
+
       res.status(200).json(user);
     } catch (error) {
       return res.status(500).json(error);
