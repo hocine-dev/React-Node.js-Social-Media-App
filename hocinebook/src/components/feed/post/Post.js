@@ -3,6 +3,7 @@ import "./post.css";
 import { Avatar, IconButton, Button, TextField } from "@mui/material";
 import { MoreVert, ThumbUp, ChatBubbleOutline } from "@mui/icons-material";
 import axios from "axios";
+import {format} from "timeago.js"
 
 
 const Post = ({ post }) => {
@@ -44,7 +45,7 @@ const Post = ({ post }) => {
             <span className="postUsername">
               {User.username}
             </span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">
             <IconButton>
@@ -54,7 +55,7 @@ const Post = ({ post }) => {
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img src={post.img} alt="Post" className="postImg" />
+          <img src={pf+post.img} alt="Post" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
