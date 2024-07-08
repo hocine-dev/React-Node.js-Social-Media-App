@@ -6,6 +6,7 @@ import axios from "axios";
 
 
 const Post = ({ post }) => {
+  console.log(post)
   const pf = process.env.REACT_APP_PUBLIC_FOLDER;
   const [Likes, setLikes] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
@@ -53,7 +54,7 @@ const Post = ({ post }) => {
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img src={post.photo} alt="Post" className="postImg" />
+          <img src={post.img} alt="Post" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
